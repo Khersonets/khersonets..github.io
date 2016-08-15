@@ -1,0 +1,326 @@
+@import url(https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=latin,cyrillic);
+/* Оформление параграфов */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+    background: floralwhite url(images/53.jpg) repeat-x top left;
+}
+#page{
+    width:960px;
+    margin:0 auto;
+    height: 2000px;
+    position: relative;
+}
+.strong-red {
+    margin-top: 300px;
+    font-weight:800;
+    color:#508ef2;
+    text-align:justify;
+    text-decoration: none;
+    text-indent: 30px;
+    line-height: 35px;
+    font-family: "Cuprum",sans-serif;
+    font-style: italic;
+    font-variant: small-caps;
+}
+.light-blue {
+    font-weight:bold;
+    color:blue;
+}
+.light-blue {
+    font-size: 18px;
+    color: black;
+}
+
+#styles li{
+    color: cyan;
+    font-family: "Cuprum", sans-serif;
+    list-style: circle url(images/logo-apple.png) inside;
+    pading: 5px;
+    border:1px solid #fff;
+}
+#styles li:hover {
+    background: rgba(242, 222, 222, 0.73);
+}
+/*размер блока навигация (высота)*/
+#navigation {
+    height: 65px;
+}
+/*ориентация списка с лево на право(горизонтально)*/
+#navigation ul li{
+    float:left;
+    position: relative;
+}
+/*настройки элементов списка*/
+#navigation ul li a{
+    color:#fff;
+    padding: 0 15px;
+    font-family: "Cuprum",sans-serif;
+    text-decoration: none;
+    line-height: 65px;
+    height: 65px;
+}
+/*настройки элементов списка при наведение на него курсора*/
+#navigation ul li a:hover {
+    background: rgba(219, 98, 98, 0.63);
+    text-decoration: underline;
+    display:block;
+}
+#navigation .dropdown{
+    position: absolute;
+    top: 100%;
+    width: 150px;
+    background-color: rgba(87, 87, 87, 0.64);
+    display: none;
+    z-index: 10;/*Для того, что бы выпадающее меню было поверх остальных элементов*/
+}
+#navigation li:hover .dropdown{
+    display: block;
+}
+#navigation .dropdown li{
+    width: 100%;
+    height: 45px;
+}
+#navigation .dropdown li a{
+    line-height: 45px;
+    height: 45px;
+}
+
+#header {
+    height: 204px;
+    position: relative;/*Позиционирование родительского обїекта*/
+}
+
+.logo {
+    display:block;
+    position: absolute;/*Позиционирование относительно родительского обїекта*/
+    top: 43px;
+    left: 0px;
+}
+
+.search {
+    position: absolute;
+    top: 100px;
+    right:0px;
+}
+#content {
+    padding-top: 20px;
+}
+
+#content:before,
+#content:after {
+  content:"";
+  display:table;
+}
+
+#content:after {
+  clear:both;
+}
+
+#content {
+  zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+#article {
+    width: 740px;
+    padding-right: 20px;
+    float: left;
+}
+#article p {
+    
+}
+#article > p {
+
+}
+
+#article p {
+ 
+}
+
+#article .combinator+p {
+    background:cornflowerblue;
+}
+#article .combinator ~ p {
+
+}
+#sidebar {
+    width: 200px;
+    float: left;
+}
+#article p {
+    color: #988686;
+    font-family: "Cuprum", sans-serif;
+}
+#sidebar ul li {
+    color: #988686;
+    font-family: "Cuprum", sans-serif;
+}
+#fixed {
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    height:100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.modal-body {
+    position: absolute;
+    width:400px;
+    height:400px;
+    background-color:#fff;
+    left:50%;
+    top:50%;
+    margin-left:-200px;
+    margin-top:-200px;
+}
+.pseudo-class{
+    color:red;
+}
+.pseudo-class:hover{
+    color:green;
+}
+
+.pseudo-class:focus{
+    color:yellow;
+}
+#article p:first-child {
+    color: lawngreen;
+}
+#article p:last-child {
+    color: cornflowerblue;
+}
+
+.pseudo-element::before,
+.pseudo-element::after {
+    content: " ";
+    display: block;
+    height: 3px;
+    width:100%;
+    background-color:aqua; 
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+a[target="_blank"] {
+    color:yellow;
+}
+a[title~="внешняя"] {
+    color:red;
+}
+a[class|="social"] {
+    color:fuchsia;
+}
+
+a[class^="social"] {
+    color:deepskyblue;
+}
+
+a[title$="icon"] {
+    color:aquamarine;
+}
+
+input[type="text"] {
+    border: 2px solid darkcyan;
+}
+
+input[type="button"] {
+    border: 2px solid red;
+}
+.first-letter::first-letter {
+    color: black;
+    font-size: 32;
+    display: block;
+    float:left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.first-line::first-line {
+    font-size: 24px;
+    color:crimson;
+}
+::selection{
+    bacground:#fff;
+    color:fuchsia;
+}
+
+.icon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url(images/sprite.png)
+}
+.icon.icon-car {
+    background-position: 0 0;
+}
+.icon.icon-car:hover {
+    background-position: 0 -40px;
+}
+.icon.icon-check {
+    background-position: -40px 0;
+}
+.icon.icon-check:hover {
+    background-position: -40px -40px;
+}
+.icon.icon-cart {
+    background-position: -80px 0;
+}
+.icon.icon-cart:hover {
+    background-position: -80px -40px;
+}
+.icon.icon-comments {
+    background-position: -120px 0;
+}
+.icon.icon-comments:hover {
+    background-position: -120px -40px;
+}
+
+.icon-check {
+    
+}
